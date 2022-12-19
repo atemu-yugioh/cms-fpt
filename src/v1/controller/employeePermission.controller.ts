@@ -76,10 +76,7 @@ class EmployeePermissionController {
   removeEmployeePermission = async (req: Request, res: Response) => {
     try {
       const response: BaseResponse = new BaseResponse();
-      const {
-        employee_id,
-        permission_id,
-      }: { employee_id: string; permission_id: string } = req.query as {
+      const { employee_id, permission_id } = req.body as {
         employee_id: string;
         permission_id: string;
       };
